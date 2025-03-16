@@ -49,6 +49,16 @@ $letter-spacing: 0%;
    }
 }
 
+.inputError {
+   border: 1px solid $primary-color;
+}
+
+.errorMessage {
+   color: $primary-color;
+   font-size: 12px;
+   margin: 5px 0;
+}
+
 .btnCalc {
    background-color: inherit;
    color: $primary-color;

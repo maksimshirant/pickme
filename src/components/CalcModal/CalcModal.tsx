@@ -10,8 +10,14 @@ const CalcModal: FC = () => {
    const [selectedMonth, setSelectedMonth] = useState<number>(12);
    const [payment, setPayment] = useState<number | null>(null);
    const [isMonthly, setIsMonthly] = useState<boolean>(true);
+   const [error, setError] = useState<string>('');
 
    const calculatePayment = () => {
+      if (creditAmount.trim() === '') {
+         setError('Поле обязательно для заполнения');
+         return;
+      }
+      setError('');
       const paymentAmount = calculateCreditPayment(creditAmount, selectedMonth);
       if (paymentAmount !== null) {
          setPayment(paymentAmount);
@@ -32,12 +38,13 @@ const CalcModal: FC = () => {
          </h3>
          <h3 className={st.subtitle}>Ваша сумма кредита</h3>
          <input
-            className={st.input}
+            className={`${st.input} ${error ? st.inputError : ''}`}
             value={creditAmount}
             type="text"
             placeholder="Введите данные"
             onChange={(e) => setCreditAmount(e.target.value)}
          />
+         {error && <div className={st.errorMessage}>{error}</div>}
          <Button
             className={st.btnCalc}
             onClick={calculatePayment}>
