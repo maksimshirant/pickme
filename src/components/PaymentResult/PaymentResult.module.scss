@@ -1,0 +1,38 @@
+.title {
+   font-weight: 500;
+   font-size: 14px;
+   line-height: 24px;
+   margin-bottom: 20px;
+}
+
+.result {
+   font-weight: 400;
+   font-size: 24px;
+   line-height: 24px;
+   letter-spacing: 0%;
+   margin: 45px 0;
+}
+
+
+.paymentTypeToggle {
+   display: flex;
+   gap: 6px;
+}
+
+.toggleBtn {
+   padding: 12px 12px;
+   border: none;
+   border-radius: 50px;
+   background-color: #F0F0F0;
+   cursor: pointer;
+   color: #333;
+
+   &:hover {
+      background-color: #DFE3E6;
+   }
+
+   &.active {
+      background: linear-gradient(to right, #FF5E56, #DC3131);
+      color: white;
+   }
+}

@@ -1,0 +1,50 @@
+.subtitle {
+   font-weight: 500;
+   font-size: 14px;
+   line-height: 24px;
+
+}
+
+.monthSelectorBlock {
+   margin-Bottom: 22px;
+   display: flex;
+   align-items: center;
+}
+
+
+
+.monthSelector {
+   margin-left: 38px;
+   display: flex;
+   gap: 12px;
+}
+
+.monthBtn {
+   padding: 12px 12px;
+   border: none;
+   border-radius: 50px;
+   background-color: #F0F0F0;
+   cursor: pointer;
+   color: #333;
+
+   &:hover {
+      background-color: #DFE3E6;
+   }
+
+   &.active {
+      background: linear-gradient(to right, #FF5E56, #DC3131);
+      color: white;
+   }
+}
+
+@media (max-width: 720px) {
+   .monthSelectorBlock {
+      flex-direction: column;
+      align-items: normal;
+   }
+
+   .monthSelector {
+      margin-left: 0px;
+      margin-top: 16px;
+   }
+}
