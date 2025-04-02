@@ -1,0 +1,86 @@
+.pick-me {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+
+  text-align: center;
+  color: #fff;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+
+  &__title {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #ff69b4;
+    text-shadow: 2px 2px 5px rgba(255, 20, 147, 0.7);
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 15px;
+
+    label {
+      font-size: 16px;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #ffb6c1;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      border: 2px solid #ff69b4;
+      border-radius: 8px;
+      font-size: 16px;
+      background: rgba(255, 182, 193, 0.2);
+      color: #ff1493;
+      font-weight: bold;
+      text-align: center;
+      transition: 0.3s;
+
+      &::placeholder {
+        color: #ff69b4;
+        opacity: 0.7;
+      }
+
+      &:focus {
+        border-color: #ff1493;
+        outline: none;
+        box-shadow: 0 0 10px rgba(255, 20, 147, 0.6);
+      }
+    }
+  }
+
+  &__button {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(45deg, #ff1493, #ff69b4);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(255, 105, 180, 0.5);
+
+    &:hover {
+      background: linear-gradient(45deg, #ff69b4, #ff1493);
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(255, 20, 147, 0.7);
+    }
+  }
+
+  &__result {
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 10px;
+    text-shadow: 2px 2px 5px rgba(255, 20, 147, 0.7);
+    background: rgba(255, 182, 193, 0.2);
+    border: 2px dashed #ff69b4;
+  }
+}
